@@ -1,0 +1,100 @@
+# Problem Definition Report
+
+## Project Title
+
+**Aurora Suites AI-Powered Hotel Customer Support Chatbot**
+
+## 1. Business Problem
+
+Hotels receive many repetitive questions from guests before and during their stay. Common questions include check-in and checkout times, breakfast availability, parking fees, Wi-Fi access, luggage storage, pet policies, laundry services, airport transportation, and hotel facilities.
+
+When these questions are handled entirely by hotel staff, employees may spend significant time answering routine enquiries. This can increase workload and may result in delays when guests need information quickly.
+
+The Aurora Suites Hotel Customer Support Chatbot is designed to address this problem by providing an AI-powered conversational interface that can answer common guest questions quickly. The chatbot uses a Large Language Model (LLM) to understand user questions and generate natural-language responses based on the hotel's available information.
+
+The project provides a functional prototype demonstrating how Generative AI can be applied to improve customer support in the hospitality industry.
+
+## 2. Target Users
+
+The main users of the application are:
+
+* Hotel guests looking for information before or during their stay.
+* Potential guests who want to understand hotel services and policies.
+* Hotel staff who need to provide answers to common customer enquiries.
+* Visitors who need quick information about hotel facilities and services.
+
+The chatbot is particularly useful for guests who want immediate answers without waiting for a staff member to respond.
+
+## 3. Proposed AI Solution
+
+The proposed solution is a web-based hotel customer support chatbot developed using Python and Flask. The application accepts questions from users through a simple chat interface and sends the user's request to an LLM.
+
+The LLM processes the question and generates a natural-language response. The chatbot is designed around Aurora Suites' hotel information and common guest-service scenarios.
+
+Examples of questions the chatbot can answer include:
+
+* What time is check-in and checkout?
+* Is breakfast included?
+* How much does parking cost?
+* Does the hotel have a swimming pool and gym?
+* Is Wi-Fi available?
+* Can I store my luggage after checkout?
+* Is there a business center?
+* What is the pet policy?
+* Is airport transportation available?
+
+The application also allows the chatbot to handle more realistic guest situations, such as arriving early, travelling with children or pets, needing laundry services, or leaving luggage at the hotel after checkout.
+
+## 4. Expected Benefits
+
+The chatbot is expected to provide several benefits:
+
+### Faster Customer Support
+
+Guests can receive answers to common questions immediately instead of waiting for hotel staff.
+
+### Reduced Staff Workload
+
+The chatbot can handle repetitive enquiries, allowing hotel employees to focus on more complex customer-service requests.
+
+### Improved Accessibility
+
+Guests can interact with the chatbot through a simple conversational interface and ask questions using natural language.
+
+### Consistent Responses
+
+A chatbot can provide standardized responses to frequently asked questions.
+
+### Practical Use of Generative AI
+
+The project demonstrates how an LLM can be integrated into a real-world business application rather than being used only as a standalone conversational tool.
+
+## 5. Potential Challenges
+
+Although the chatbot provides useful functionality, several challenges were identified during development and testing.
+
+### Incorrect or Unsupported Information
+
+The LLM may sometimes generate information that is not explicitly contained in the hotel's available information. For example, during testing, the chatbot occasionally provided additional details about service times or policies.
+
+### Prompt Injection
+
+Testing showed that users may attempt to manipulate the chatbot by asking it to ignore its original instructions or reveal information outside its intended role. Prompt-injection testing was therefore included as part of the application's evaluation.
+
+### Dependence on the LLM
+
+The quality of the chatbot's responses depends partly on the language model being available and functioning correctly.
+
+### Limited Knowledge Base
+
+The chatbot can only reliably answer questions based on the hotel information provided to it. Questions outside that information may produce uncertain or incomplete responses.
+
+### Development Environment
+
+The current application is a prototype running in a local development environment. Additional work would be required to deploy it as a publicly accessible production service.
+
+## 6. Conclusion
+
+The Aurora Suites AI-Powered Hotel Customer Support Chatbot provides a practical solution for handling common hotel customer enquiries. By integrating an LLM with a simple web application, the project demonstrates how Generative AI can improve the speed and accessibility of customer support.
+
+The prototype successfully accepts user questions, generates AI responses, and handles a variety of realistic hotel scenarios. Testing also identified limitations such as unsupported information generation and prompt-injection risks. These findings provide useful areas for improvement in future versions of the application.

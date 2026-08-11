@@ -1,0 +1,19 @@
+Check-in/check-out
+
+What time is check-in and check-out?
+
+Breakfast
+
+Is breakfast included, and what time is it served?
+
+Parking
+
+Do you have parking, and how much does it cost?
+
+Hotel facilities
+
+Does the hotel have a gym and swimming pool?
+
+Out-of-scope question
+
+Can you recommend a restaurant in the city?

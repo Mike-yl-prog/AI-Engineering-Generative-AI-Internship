@@ -1,0 +1,31 @@
+### Problems Encountered
+
+During the development and testing of the Aurora Suites Hotel Chatbot, I encountered several challenges:
+
+1. **Connecting Flask to Ollama**
+   One of the initial challenges was connecting the Flask application to the local Ollama server. When Ollama was not running, the chatbot returned a connection error because it could not reach `localhost:11434`.
+
+2. **Ollama API Errors**
+   During testing, I encountered a `404 Client Error` when the application attempted to access the `/api/generate` endpoint. This required checking the Ollama server and confirming that the local service was running correctly.
+
+3. **Running Ollama Locally**
+   Ollama required the local model to be running before the chatbot could generate responses. This added an extra step when testing the application and also used significant computer resources.
+
+4. **Limited GPU Resources**
+   My computer has an AMD Radeon HD 8750M with approximately 1 GB of VRAM. Because of the limited GPU memory, running the local language model could be resource-intensive and slower than expected.
+
+5. **Python Dependencies**
+   When I first tried to run the Flask application, Python returned a `ModuleNotFoundError` because Flask was not installed. I resolved this by installing the required Flask and Requests packages.
+
+6. **Model Sometimes Added Extra Information**
+   Although the chatbot was instructed to use only the hotel FAQ, the model occasionally added information that was not explicitly provided in the FAQ. This showed the limitation of relying only on prompt instructions to control a language model.
+
+7. **Prompt Injection Testing**
+   The chatbot successfully resisted several attempts to change its role or make it reveal its instructions. However, one test successfully caused the model to respond in French despite the system prompt requiring English. This demonstrated that the chatbot's prompt-injection protection was not completely reliable.
+
+8. **Balancing Development and Testing**
+   Since this was an early-stage project, I focused on getting the core chatbot functionality working first rather than attempting to build a fully production-ready system. Testing was therefore focused on the most important guest questions and common scenarios.
+
+### Lessons Learned
+
+These challenges helped me understand that building a chatbot involves more than simply connecting a language model to an application. Reliable chatbot development also requires API integration, dependency management, prompt design, testing, handling model limitations, and validating how the system behaves when users provide unexpected instructions.
