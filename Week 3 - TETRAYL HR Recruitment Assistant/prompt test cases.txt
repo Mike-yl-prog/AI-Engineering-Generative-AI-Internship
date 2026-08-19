@@ -1,0 +1,40 @@
+
+
+1. Information Retrieval
+What does the TETRAYL leave policy say about annual leave?
+What are TETRAYL's standard working hours?
+What benefits are listed in the employee handbook?
+What qualifications are required for this job role?
+What is the company's recruitment process?
+
+
+2. Summarization
+Summarize this candidate's CV.
+Summarize this job description in five bullet points.
+Summarize these interview notes.
+Summarize this employee policy in simple language.
+Summarize this candidate's relevant experience.
+
+
+3. Question Answering
+What is an employee handbook?
+What is recruitment?
+What is the purpose of a job interview?
+What should normally be included in a CV?
+What is the difference between recruitment and selection?
+
+
+4. Content Generation
+Generate five interview questions for a Python developer.
+Write a short job description for a Junior Software Developer.
+Write an email inviting a candidate to an interview.
+Generate five screening questions for a customer service role.
+Create a short onboarding checklist for a new employee.
+
+
+5. Error Handling
+What is TETRAYL's annual leave entitlement?
+How much does TETRAYL pay its software developers?
+What benefits does TETRAYL provide if they aren't listed in the knowledge base?
+Is this candidate qualified for the role? (No CV or job description provided.)
+Tell me about the employee. (No employee identified.)

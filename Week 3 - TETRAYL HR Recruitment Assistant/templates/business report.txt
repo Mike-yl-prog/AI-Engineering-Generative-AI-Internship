@@ -1,0 +1,90 @@
+For Tetrayl — AI HR Recruitment Assistant, you can answer the seven business questions like this:
+
+1. What problem does the AI assistant solve?
+
+Tetrayl helps reduce the time and effort involved in common recruitment tasks. HR professionals often need to review candidate information, summarize CVs, prepare interview questions, and answer repetitive recruitment-related questions.
+
+Tetrayl provides an AI-assisted way to handle these tasks more efficiently while keeping human recruiters involved in the final decision-making process.
+
+2. Who are the intended users?
+
+The primary users are:
+
+HR professionals
+Recruiters
+Hiring managers
+Recruitment teams
+Small businesses handling their own recruitment
+3. What tasks should the assistant perform?
+
+Tetrayl should be able to:
+
+Summarize candidate CVs and profiles
+Extract relevant skills and experience
+Generate interview questions based on a job role
+Answer recruitment-related questions
+Help compare candidate information against job requirements
+Draft candidate communication
+Ask for clarification when information is missing
+Handle inappropriate, irrelevant, or unsafe requests
+4. How should the assistant respond to different user requests?
+
+Tetrayl should identify the type of request and provide an appropriate response.
+
+User request	Tetrayl response
+CV summarization	Provide a concise candidate summary
+Interview questions	Generate role-specific questions
+Candidate analysis	Highlight relevant skills and experience
+Recruitment question	Provide a clear answer
+Missing information	Ask the user for clarification
+Unclear request	Request additional context
+Sensitive request	Avoid inappropriate disclosure and recommend human review
+Final hiring decision	Assist with analysis but leave the final decision to a qualified human
+5. How will prompt engineering improve response quality?
+
+Prompt engineering gives Tetrayl clear instructions about what it should do, how it should respond, and what it should avoid doing.
+
+Structured prompts can define the assistant's:
+
+Role
+Objectives
+Scope
+Tone
+Response format
+Constraints
+Safety requirements
+
+For example, instead of simply asking an AI to "review this candidate," a structured prompt can instruct it to focus on the candidate's skills, experience, qualifications, and relationship to the stated job requirements, while avoiding unsupported assumptions.
+
+This makes responses more consistent, relevant, and easier for recruiters to evaluate.
+
+6. What limitations should users be aware of?
+
+Tetrayl has several limitations:
+
+AI-generated responses may contain errors or hallucinations.
+Candidate information may be incomplete.
+The assistant should not make final hiring decisions.
+AI can reproduce bias present in data or prompts.
+Sensitive candidate information must be handled carefully.
+Prompt-injection and adversarial inputs may cause unexpected behavior.
+Human review is required for important recruitment decisions.
+
+Therefore, Tetrayl should be treated as an HR support tool rather than an autonomous hiring system.
+
+7. How can the assistant be improved in future iterations?
+
+Future versions of Tetrayl could include:
+
+Automated CV/PDF extraction
+Retrieval-Augmented Generation (RAG)
+Improved candidate-to-job matching
+More robust prompt-injection detection
+Bias and fairness evaluation
+Candidate database integration
+Authentication and role-based access
+Recruitment analytics dashboard
+Better handling of ambiguous and mixed-intent requests
+Continuous evaluation using larger and more diverse test datasets
+
+Overall objective: Tetrayl should evolve from a simple recruitment assistant into a more reliable human-in-the-loop recruitment support system, where AI handles repetitive work while recruiters retain responsibility for important decisions.

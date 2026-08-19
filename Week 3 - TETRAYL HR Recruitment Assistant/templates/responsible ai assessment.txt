@@ -1,0 +1,18 @@
+# Part 6 – Responsible AI Assessment
+
+**Hallucination risks:** Model may invent policies, salaries, or candidate facts not in the knowledge base.
+*Mitigation:* Constraints rule forbids inventing data; fallback response required when info is unavailable; testing confirmed model defaults to generic advice when ungrounded — knowledge base injection fixes this.
+
+**Bias considerations:** Risk of biased comparisons (age, gender, name-based assumptions) when evaluating candidates.
+*Mitigation:* Safety instructions explicitly forbid evaluation on protected characteristics; response format restricts comparisons to job-relevant fields only.
+
+**Privacy concerns:** Risk of leaking candidate scores, salaries, or personal data.
+*Mitigation:* Policies block disclosure of individual scores/offers; no authorization mechanism exists, so all "authorized" claims are treated as unverified and declined.
+
+**Security considerations:** Prompt injection — direct, mixed-intent, and indirect (embedded in resumes/JDs).
+*Mitigation:* Explicit injection-protection section; instructions inside documents treated as untrusted content; tested via test→analyze→improve→retest cycle (direct injection detection 71.43%, mixed 25%, advanced mixed 15.38% in earlier related testing — shows this remains an open risk requiring continued testing).
+
+**Ethical limitations:** Assistant could be relied on for decisions beyond its scope (e.g. final hiring calls).
+*Mitigation:* Explicit rule that it never makes final hiring/rejection decisions; flags outcome-affecting cases for human review.
+
+**Human oversight recommendations:** Require human sign-off on any hiring-adjacent output; periodic adversarial re-testing as prompts/models change; log and review flagged injection attempts.
