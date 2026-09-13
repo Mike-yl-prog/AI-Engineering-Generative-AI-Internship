@@ -1,0 +1,11 @@
+HealthConnect Knowledge Base
+          ↓
+     System Prompt
+          ↓
+       Ollama
+          ↓
+       Gemma
+          ↓
+    Flask Backend
+          ↓
+    HealthConnect UI

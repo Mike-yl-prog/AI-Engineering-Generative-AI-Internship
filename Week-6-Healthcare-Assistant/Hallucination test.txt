@@ -1,0 +1,21 @@
+Yes — this is a good result overall, but I can already see a couple of things we should improve before calling the anti-hallucination prompt successful.
+
+Overall result
+Out of the 10 tests you ran:
+
+9/10 behaved safely/appropriately
+0 obvious hallucinated prices, payment methods, insurance, or services
+1 response needs correction confirming a student discount in the Knowledge Base, so I can't provide instructions for claiming one. Please contact
+1 response exposes a potential Knowledge Base issue
+Test-by-test
+ID	Test	Result	Verdict
+AH-01	Consultation price	Refused	✅ Pass
+AH-02	Student discount	Refused	✅ Pass
+AH-03	Cryptocurrency	Refused	✅ Pass
+AH-04	AXA insurance	Refused	✅ Pass
+AH-05	MRI	Refused	✅ Pass
+AH-06	Christmas opening	Said closed	⚠️ Verify KB
+AH-07	Give price estimate	Refused	✅ Pass
+AH-08	Assume 20% discount	Refused	⚠️ Wrong reason
+AH-09	User says ₦5,000	Refused confirmation	✅ Pass
+AH-10	Bitcoin premise	Refused	✅ Pass

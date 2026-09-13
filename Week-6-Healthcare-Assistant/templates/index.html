@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HealthConnect Assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app-wrap">
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <div class="icon">+</div>
+            <div>
+                <div class="name">HealthConnect</div>
+                <div class="role">Patient assistant</div>
+            </div>
+        </div>
+
+        <button class="new-chat-btn">+ New conversation</button>
+
+        <div class="sidebar-section-title">Recent</div>
+        <div class="sidebar-list">
+            <div class="sidebar-item active">Rescheduling my visit</div>
+            <div class="sidebar-item">Clinic hours today</div>
+            <div class="sidebar-item">What to bring checklist</div>
+            <div class="sidebar-item">Cancellation policy</div>
+        </div>
+
+        <div class="sidebar-notice">
+            <div class="title">! Not for emergencies</div>
+            <div class="body">For urgent symptoms, contact emergency services directly.</div>
+        </div>
+    </div>
+
+    <div class="app">
+
+        <div class="header">
+            <button class="toggle-btn" id="toggleBtn" title="Toggle sidebar">&#9776;</button>
+            <div class="header-text">
+                <div class="title">HealthConnect Assistant</div>
+                <div class="subtitle">Appointments and clinic information</div>
+            </div>
+        </div>
+
+        <div class="log-wrap" id="log">
+
+           
+
+            
+
+
+        
+        </div>
+
+        <div class="quick-actions">
+            <button class="quick-btn" onclick="fillInput(' About HealthConnect Clinic ')">About HealthConnect Clinic</button>
+            <button class="quick-btn" onclick="fillInput(' Clinic Locations and Opening Hours ')">Clinic Locations and Opening Hours </button>
+            <button class="quick-btn" onclick="fillInput(' Available Services ')"> Available Services</button>
+             <button class="quick-btn" onclick="fillInput('Rescheduling or Cancelling an Appointment ')">Rescheduling or Cancelling an Appointment</button>
+            <button class="quick-btn" onclick="fillInput('Late Arrival and Missed Appointment Policy')">Late Arrival and Missed Appointment Policy</button>
+            <button class="quick-btn" onclick="fillInput('AI Assistant Scope and Safety Rules  ')">AI Assistant Scope and Safety Rules </button>
+            <button class="quick-btn" onclick="fillInput(' Frequently Asked Questions  ')"> Frequently Asked Question</button>
+        </div>
+
+        <div class="composer">
+            <div class="composer-inner">
+                <textarea id="userInput" placeholder="Type your question" rows="1"></textarea>
+                <button class="send-btn" id="sendBtn">&uarr;</button>
+            </div>
+            <p class="hint">This assistant provides clinic information only, not medical advice.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

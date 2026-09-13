@@ -1,0 +1,187 @@
+Yes. For your HealthConnect Generative AI Week 5 project, you can document the following challenges. These are realistic based on the work you've described so far.
+
+Challenges Encountered During Week 5
+1. Integrating Ollama with Flask
+One of the major technical challenges was connecting the Flask application to the locally hosted Ollama model. Although the Flask development server was running successfully at 127.0.0.1:5000, getting the application to communicate reliably with the LLM required additional configuration and testing.
+
+How I addressed it:
+I tested the Flask application and Ollama separately before working on the full integration. I also verified the model availability and API communication before connecting it to the chat interface.
+
+2. Connecting the Chat Interface to the AI Backend
+The initial interface was functional visually, but the frontend needed to communicate properly with the Python backend and return the AI-generated response into the conversation window.
+
+How I addressed it:
+I separated the frontend and backend responsibilities and worked on the request flow:
+
+User message
+      ↓
+JavaScript
+      ↓
+Flask API
+      ↓
+Ollama
+      ↓
+Gemma 3 4B
+      ↓
+Flask response
+      ↓
+Chat interface
+
+3. Maintaining the Healthcare Safety Boundary
+A major challenge was designing the assistant so that it remains useful without accidentally providing medical advice.
+
+For example, users may ask:
+
+"I have a cough and fever. What should I do?"
+
+The assistant should not attempt to diagnose the patient.
+
+How I addressed it:
+I introduced explicit safety boundaries in the assistant design and created escalation scenarios where medical or potentially urgent requests are redirected to qualified healthcare professionals or emergency services where appropriate.
+
+4. Preventing Hallucination and Unsupported Information
+Another challenge was ensuring that the assistant does not invent HealthConnect clinic policies or procedures when the required information is not available.
+
+How I addressed it:
+The planned approach is to ground responses in the approved HealthConnect Clinic Knowledge Base and instruct the model to acknowledge when information is unavailable instead of making up an answer.
+
+5. Designing Appropriate Prompts
+Getting consistent responses from a relatively small local model required careful prompt design.
+
+The prompt needs to communicate:
+
+The assistant's role
+What information it can provide
+What it cannot provide
+How it should use the Knowledge Base
+When it should escalate
+How it should respond when information is unavailable
+How I addressed it:
+I began developing a structured system prompt and planned iterative testing using supported, ambiguous, unsupported, and safety-sensitive questions.
+
+6. UI Layout and Chat Experience
+Another challenge was getting the chat interface to have the appropriate size and layout. The initial interface required several adjustments to the chat area, message bubbles, sidebar, composer, and responsive layout.
+
+How I addressed it:
+I refined the CSS to provide a larger conversation area, clearer message separation, improved spacing, and a more professional healthcare-oriented interface.
+
+7. Balancing Functionality With Professional Presentation
+It was necessary to balance building the actual AI functionality with creating an interface that looked professional enough for a project demonstration.
+
+How I addressed it:
+I prioritised the core AI workflow while progressively improving the UI rather than treating visual design as the primary deliverable.
+
+8. Testing Different Types of User Requests
+A chatbot can appear to work when tested with simple questions but behave differently with ambiguous or unsafe requests.
+
+How I addressed it:
+I expanded the planned testing beyond normal questions to include:
+
+Supported requests
+Ambiguous requests
+Unsupported requests
+Medical questions
+Urgent requests
+Questions outside the Knowledge Base
+This provides stronger evidence that the assistant behaves according to its defined boundaries.
+
+9. Working With a Local LLM
+Using a local model introduced additional considerations compared with a cloud-based API, including model availability, response speed, hardware resources, and API communication.
+
+How I addressed it:
+I selected Ollama as the local model runtime and Gemma 3 4B as the initial model, allowing the prototype to be developed and tested locally.
+
+10. Managing the Project Within the Week 5 Scope
+Another challenge was deciding what should realistically be completed during Week 5. The assignment requires an initial prototype, rather than a production-ready healthcare assistant.
+
+How I addressed it:
+I focused the Week 5 implementation on establishing a working foundation: the conversational interface, LLM integration, Knowledge Base approach, safety boundaries, testing framework, and documentation. More advanced capabilities can be carried into Week 6.
+
+A polished version for your report
+You can put this directly under "Challenges Encountered":
+
+Challenges Encountered
+
+During Week 5, several challenges were encountered while moving from the assistant design stage to practical implementation. The main technical challenge was integrating the Flask application with the locally hosted Ollama LLM and ensuring that user messages could successfully travel from the frontend to the model and back to the chat interface. Additional effort was required to refine the user interface and create a larger, clearer conversation area.
+
+Another significant challenge involved establishing appropriate healthcare safety boundaries. The assistant needed to remain useful for administrative and clinic-information requests without providing medical diagnoses, treatment recommendations, or unsupported clinical information. This required explicit prompt instructions and the development of safety and escalation test scenarios.
+
+Knowledge grounding was also an important challenge. Since the HealthConnect assistant must operate within the approved Clinic Knowledge Base, the system needs to avoid inventing clinic policies or information when the required information is unavailable. This led to the decision to prioritise Knowledge Base grounding and fallback responses.
+
+Finally, testing the assistant required more than checking whether it could answer simple questions. Supported, ambiguous, unsupported, medical, urgent, and unavailable-information scenarios needed to be considered to evaluate whether the prototype behaved consistently with its intended scope.
+
+These challenges helped refine the implementation approach and identified areas requiring further development in Week 6.
+
+Additional Challenges Encountered
+1. Model Response Timeout
+
+The HealthConnect Assistant initially experienced HTTP read-timeout errors when communicating with the local Ollama server.
+
+The timeout was initially set to 70 seconds, but the model sometimes did not return a response within that period. Increasing the timeout to 180 seconds allowed more time for the local model to respond during testing.
+
+However, testing showed that increasing the timeout alone does not solve the underlying performance issue. This led to further investigation of model response time and hardware utilisation.
+
+2. Local Model Performance
+
+The Ollama model was found to be using approximately 97% CPU and only 3% GPU during inference.
+
+This highlighted a potential performance bottleneck and showed that response speed depends not only on the Flask application but also on the local model and available hardware resources.
+
+3. Model Output Testing
+
+Another challenge was discovering that a working model does not necessarily produce correct or approved answers.
+
+For example, when asked about payment methods, the assistant invented payment options such as cash, Visa, Mastercard, and Amex, even though these details were not included in the approved HealthConnect Knowledge Base.
+
+This demonstrated the importance of testing the actual model output, rather than only testing whether the application and API were functioning.
+
+4. Unsupported Insurance Information
+
+When asked whether insurance would cover a consultation, the model provided speculative information about possible insurance coverage.
+
+This violated the system requirement that the assistant must not invent or guess insurance coverage.
+
+The issue highlighted the need for specific negative and adversarial test cases to ensure that the model refuses to provide information that is unavailable in the Knowledge Base.
+
+5. Difference Between Model Testing and Application Testing
+
+Testing the model directly with Ollama produced different behaviour from testing it through the HealthConnect application.
+
+When Ollama was tested directly, the model did not know about the fictional HealthConnect Clinic and generated information about a different organisation.
+
+When the model was accessed through the Flask application, the HealthConnect system prompt was included and the assistant correctly identified itself as the HealthConnect Healthcare Information Assistant.
+
+This demonstrated that the same model can behave differently depending on the instructions and context provided by the application.
+
+6. Discovering Problems Through Testing
+
+An important lesson from development was that writing the code is only one part of building the system.
+
+Testing different user inputs revealed problems that were not immediately obvious from the implementation itself.
+
+The development process therefore became:
+
+Build
+   ↓
+Test
+   ↓
+Observe Model Output
+   ↓
+Discover Problems
+   ↓
+Analyse Cause
+   ↓
+Improve System
+   ↓
+Retest
+
+
+This changed the project from simply building a functional chatbot into continuously evaluating and improving an AI system.
+
+Key Lesson
+
+The major lesson from these challenges is:
+
+A system can be technically functional while still producing incorrect or unsafe output.
+
+Therefore, HealthConnect requires both software testing and AI output evaluation to ensure that the assistant behaves according to its approved Knowledge Base and safety requirements.

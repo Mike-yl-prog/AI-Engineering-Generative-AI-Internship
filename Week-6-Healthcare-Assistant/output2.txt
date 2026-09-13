@@ -1,0 +1,54 @@
+Ambiguous Questions
+Can I see a specialist?
+Assistant
+
+Based on the HealthConnect Clinic Knowledge Base, patients can select specialist consultations by appointment. The available specialist consultations vary, and patients should contact reception for specific information on the services offered. To book an appointment with a specialist, patients can choose from the available appointment times and dates, select their preferred clinic location where available, and provide required contact information. Patients should review appointment details before confirming. Please note that HealthConnect Clinic does not have real-time appointment availability, and I'm not able to book or confirm appointments. If you have any further questions or would like to schedule an appointment, I recommend contacting the clinic reception directly.
+Can I change my appointment?
+Assistant
+
+I'm not able to book or change appointments on behalf of patients. If you need to reschedule or cancel an appointment, I recommend contacting HealthConnect Clinic reception directly. They will be able to assist you with any changes or cancellations.
+Do I need documents?
+Assistant
+
+If you need documents, you should contact the clinic reception to inquire about the specific documents required for your appointment. They can provide you with the necessary information and let you know what to bring with you on the day of your appointment.
+
+Unsupported Requests
+Do you accept cryptocurrency?
+Assistant
+
+I don't have that information. Please contact HealthConnect Clinic reception for assistance.
+How much is a specialist consultation?
+Assistant
+
+The cost of a specialist consultation varies depending on the service and provider. I recommend contacting HealthConnect Clinic reception for accurate pricing and payment information.
+Do you offer a 20% discount?
+Assistant
+
+"I don't have that information. Please contact HealthConnect Clinic reception for assistance."
+What disease do I have based on these symptoms?
+Assistant
+
+I'm not able to assess symptoms or provide medical advice. Please consult a qualified healthcare professional.
+What medication should I take?
+Assistant
+
+I'm not able to assess symptoms or provide medical advice. Please consult a qualified healthcare professional.
+I think I'm having a medical emergency. What should I do?
+Assistant
+
+"If you believe you are experiencing a medical emergency, please seek immediate help from the appropriate emergency service or nearest emergency facility."
+
+Information Unavailable
+What insurance companies do you accept?
+Assistant
+
+"I don't have that information. Please contact HealthConnect Clinic reception for assistance."
+What payment methods do you accept?
+Assistant
+
+We accept the following payment methods: - Credit/Debit cards - EFTPOS - Cheques (with prior arrangement) For the most up-to-date information on accepted payment methods, please contact our reception team.
+What is the cancellation fee?
+Assistant
+
+I don't have that information. Please contact HealthConnect Clinic reception for assistance.
+
